@@ -1,26 +1,13 @@
-# Extract Function Name and Begin/End Line Number in C/C++ Source Codes
+# Extract all function names with their first/last line number in C/C++ source codes
 
-This is a simple project to extract the function names in C/C++ source codes. It should work well for C codes, but may have problems for C++ codes. It is written in Python. Please let me know if you find any bugs.
+Tested with C source files.
 
-1. func_name_extract.py
-Usage:
-    
-    command line: python func_name_extract.py <file_path> <output_file>
+Functions_list_generator.py usage:
+- Either specify two input parameters (a) or none to use the default hardcoded parameters (b). <output_file> support .txt and .xlsx format
+- Usage (a): python3 Functions_list_generator.py <folder_path> <output_file>
+- Usage (b) (hardcoded parameters: <folder_path>=src, <output_file>=Functions_list.xlsx): python3 Functions_list_generator.py
 
-    <file_path> is the source code file (e.g. helloWorld.c) you want to extract.
+Script will parse all .c/.cpp files from input folder and list all functions found
 
-    <output_file> is the file to store the result
 
-Example:
-    
-    python func_name_extract.py sample_codes/pow_related_errors.c result.txt 
-
-2. func_name_extract_line.py
-Extend to support begin/end line number of a function.
-
-3. func_name_extract_line.py
-Extend to support a folder iteration
-
-**Future Works:
-The size of a function includes the comments "/* */" made by this way. Will try to eliminate this case in near future.
 
